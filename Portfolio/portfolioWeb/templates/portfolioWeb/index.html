@@ -1,0 +1,28 @@
+{% extends 'portfolioWeb/base.html' %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="w-50">
+    <div class="loader img-fluid">
+        <span></span>
+        <span></span>
+        <span></span>
+        <div  class="my-photo"><img src="https://mdn.mozillademos.org/files/7693/catfront.png"></div>
+    </div>
+    <h1>Hi! I'm Adam !</h1>
+    <h2>I want to be a web developer</h2>
+    <p><i>I'm from graduate network engineer, from passion I'm a begginer programmer and "home" music producer.
+        The team work is something that I a specially love. I also like to solve some unconventional exercises and
+        challenges.
+        Amibtious and obstinate, always going for realization set goal.</i>
+    </p>
+</div>
+<div class="w-50 ">
+    <img class="img-fluid" src="{% static 'portfolioWeb/images/website.svg' %}" alt="Picture of monitor that display website">
+</div>
+
+{% endblock %}
