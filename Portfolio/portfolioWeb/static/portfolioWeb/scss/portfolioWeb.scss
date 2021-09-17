@@ -1,0 +1,130 @@
+@import 'portfolioWeb/scss/colors';
+
+body{
+text-align:center;
+color: white;
+background-color: black;
+font-size: 1rem;
+
+    .testowa{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    border: 2px solid black;
+    flex-wrap: wrap;
+
+        .loader{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position:relative;
+            height: 50vh;
+            width: 50vw;
+
+            span{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 2px dotted #eee;
+                border-radius:42% 58% 31% 69% / 59% 42% 58% 41% ;
+                animation: animate 10s linear infinite;
+                box-shadow: 0px 0px 64px 14px rgba(28, 28, 39, 0.81);
+                -webkit-box-shadow: inset 0px 0px 64px 1px rgba(28, 28, 39, 0.08);
+                -moz-box-shadow: inset 0px 0px 64px 1px rgba(28, 28, 39, 0.08);
+                box-shadow: inset 0px 0px 64px 1px rgba(28, 28, 39, 0.08);
+            }
+
+                span:nth-child(2){
+                    animation-direction: reverse;
+                }
+
+                span:nth-child(3){
+                    animation-duration: 7s;
+                }
+
+                @keyframes animate{
+                    0%{
+                    transform: rotate(0deg);
+                    }
+                    100%{
+                    transform: rotate(360deg);
+                    }
+                }
+        }
+
+    }
+
+    .skills-section{
+    min-height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background: rgb(0,192,237);
+    background: linear-gradient(90deg, rgba(0,192,237,1) 0%, rgba(0,101,255,1) 50%, rgba(124,0,255,1) 89%);
+
+        .skills{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+            .skill-card{
+                margin: 0.5rem;
+                width: 30%;
+                height: 180px;
+                border-radius: 1rem;
+                -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+                -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+                box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+
+                   .skill-image{
+                        margin: 0 auto;
+                            img{
+                                display: block;
+                                margin: 1rem auto;
+                                width: 40%;
+                                height: 40%;
+                            }
+                   }
+
+                h3{
+                   margin: 1rem 0;
+                   }
+            }
+        }
+
+    }
+
+    .footer-test{
+    flex-wrap: wrap;
+    color: white;
+    font-size: 0.8rem;
+    background: rgb(0,192,237);
+    background: linear-gradient(101deg, rgba(0,192,237,1) 0%, rgba(0,101,255,1) 50%, rgba(124,0,255,1) 89%);
+
+        h5{
+        margin:0;
+        }
+
+        a{
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #f2f2f2;
+        }
+
+        ul{
+        margin:0;
+        padding: 0;
+
+            li{
+            padding: 0.5rem;
+            list-style-type: none;
+            }
+        }
+    }
+}

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'portfolioWeb.apps.PortfoliowebConfig',
+    'django_sass',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -120,7 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, '../portfolioWeb/static'),
+    os.path.join(BASE_DIR, 'portfolioWeb/static'),
 )
 
 # Default primary key field type
