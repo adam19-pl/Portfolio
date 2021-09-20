@@ -6,23 +6,29 @@ color: white;
 background-color: black;
 font-size: 1rem;
 
-    .testowa{
-    display: flex;
+    .testowa {
     flex-direction:column;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
-    border: 2px solid black;
-    flex-wrap: wrap;
+    width: 100%;
 
         .loader{
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto;
             position:relative;
-            height: 50vh;
-            width: 50vw;
+            width: 400px;
+            height: 400px;
+
+            @media only screen and (max-width: 900px) {
+                width: 50vw;
+                height: 50vw;
+            }
+
+            @media only screen and (max-width: 402px) {
+               width: 200px;
+               min-height: 200px;
+            }
 
             span{
                 position: absolute;
@@ -74,21 +80,37 @@ font-size: 1rem;
         flex-wrap: wrap;
 
             .skill-card{
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                flex-direction: column;
                 margin: 0.5rem;
                 width: 30%;
-                height: 180px;
+                height: 20%;
                 border-radius: 1rem;
                 -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
                 -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
                 box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 
+            @media only screen and (max-width: 796px) {
+                width: 70%;
+                height: 250px;
+            }
+
+            @media only screen and (max-width: 402px) {
+                width: 70%;
+                height: 200px;
+            }
+
                    .skill-image{
+                   padding: 0;
+                        width: 50%;
                         margin: 0 auto;
                             img{
                                 display: block;
                                 margin: 1rem auto;
-                                width: 40%;
-                                height: 40%;
+                                width: 80%;
+                                height: 80%;
                             }
                    }
 
@@ -128,3 +150,19 @@ font-size: 1rem;
         }
     }
 }
+
+
+        .button-read-me{
+        text-decoration:none;
+        color: white;
+        padding: 0.6rem;
+        background: rgb(0,192,237);
+        border-radius: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 600ms;
+
+            &:hover {
+                background: #05729A;
+            }
+        }
