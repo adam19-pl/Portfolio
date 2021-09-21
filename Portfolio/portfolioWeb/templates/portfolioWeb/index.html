@@ -6,7 +6,15 @@ Home Page
 
 {% block content %}
 {% load static %}
+    {% if message %}
+    <div class="container d-flex min-vh-100 testowa">
+    <h2> Thanks for sending a message!</h2>
+    <p> We recived your email and will respond soon...</p>
+        <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
+    </div>
+    {% else %}
 <div class="container d-flex min-vh-100 testowa">
+
     <div class="loader">
         <span></span>
         <span></span>
@@ -179,31 +187,31 @@ Home Page
 
 </div>
 <a class="button-read-me" href="{% url 'projects' %}"> More Info </a>
-
-
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,64L60,58.7C120,53,240,43,360,64C480,85,600,139,720,144C840,149,960,107,1080,101.3C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
 </svg>
 <div class="skills-section pb-5 pt-5">
     <div class="container">
-        {% csrf_token %}
         <h2 class="mb-5"> Contact me </h2>
-        <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control " id="exampleFormControlInput1"
-                   placeholder="email-adress@example.com">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlInput2" class="form-label">Subject</label>
-            <input type="email" class="form-control " id="exampleFormControlInput2"
-                   placeholder="Subject">
-        </div>
-        <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
-        </div>
-        <button class="btn btn-info " type="submit">Send</button>
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="message-email" class="form-label">Email address</label>
+                <input type="email" class="form-control" name ="message-email" id="message-email"
+                       placeholder="email-adress@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="message-subject" class="form-label">Subject</label>
+                <input type="text" class="form-control " name="message-subject" id="message-subject"
+                       placeholder="Subject">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="10"></textarea>
+            </div>
+            <input class="btn btn-info "type="submit" value="Send"></input>
+        </form>
     </div>
 </div>
 
@@ -211,6 +219,7 @@ Home Page
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,160L60,144C120,128,240,96,360,96C480,96,600,128,720,154.7C840,181,960,203,1080,208C1200,213,1320,203,1380,197.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
 </svg>
+{% endif %}
 
 {% endblock %}
 

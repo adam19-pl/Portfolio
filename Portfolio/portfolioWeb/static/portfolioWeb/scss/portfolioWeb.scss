@@ -2,8 +2,8 @@
 
 body{
 text-align:center;
-color: white;
-background-color: black;
+color: black;
+background-color: #f7f7f7;
 font-size: 1rem;
 
     .testowa {
@@ -163,6 +163,7 @@ font-size: 1rem;
         transition: 600ms;
 
             &:hover {
+                color:white;
                 background: #05729A;
             }
         }
