@@ -3,9 +3,29 @@
 {% block title %}
 Contact Page
 {% endblock %}
-
+{% load static %}
 {% block content %}
 <div class="container testowa">
-    <h2> Welcome to Contact Page ! </h2>
+    <h2 class="mb-3"> Welcome to Contact Page ! </h2>
+    <h3> Go and check my LinkedIn profile</h3>
+    <p> If you want, write a message to me ! </p>
+    <h3> My GitHub Profile</h3>
+    <div class="skill-image  w-25 m-auto">
+        <img class="img-fluid " src="{% static 'portfolioWeb/images/github.svg' %}"
+             alt="SASS icon image">
+    </div>
+    {% if message_name %}
+    <div>
+        <h2> Thanks {{ message_name.title }} for your message!</h2>
+    </div>
+    {% else %}
+    <div class="form-group">
+        <form action="{% url 'contact' %}"method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input class="btn btn-info col-md-1 m-auto mt-4" type="submit" value="Send">
+        </form>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

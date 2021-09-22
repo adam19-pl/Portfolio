@@ -1,10 +1,110 @@
 {% extends 'portfolioWeb/base.html' %}
 
 {% block title %}
- About Page
+About Page
 {% endblock %}
 
+{% load static %}
 {% block content %}
- <h2> Welcome to About Page ! </h2>
+<div class="container min-vh-100">
+    <h2> Welcome to About Page ! </h2>
+    <div class="content-information d-flex justify-content-center">
+        <div class="left w-50">
+            <p>My photo</p>
+        </div>
+        <div class="right w-50">
+            <p>Info</p>
+        </div>
+    </div>
+    <h2 class="mb-5">Programming Skills</h2>
+    <p class="mb-5 w-75 m-auto"><i>Why every skill on Junior LVL ?
+        Maybe my skills are more advanced, but I think there's so many thing to learn...
+        Because this is the beggining and my journey with programming just started.
+        I'm hungry for more knowledge and Lvl up my skills!</i></p>
 
+    <table class="m-auto w-75">
+        <thead>
+        <th class="w-50">Technology</th>
+        <th class="w-50">Lvl</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td><i class="fab fa-python"></i> Python</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-python"></i> Django</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-python"></i> DRF</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-js"></i> JavaScript</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-react"></i> React</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fas fa-database"></i> SQL</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-html5"></i> HTML</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-css3-alt"></i> CSS</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-sass"></i> SASS</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-git-alt"></i> Git & GitHub</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-linux"></i> Linux</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        <tr>
+            <td><i class="fab fa-unity"></i> Unity</td>
+            <td><i class="fas fa-circle point"></i> <i class="fas fa-circle point"></i> <i class="fas fa-circle"></i>
+                <i class="fas fa-circle "></i> <i class="fas fa-circle "></i> / Junior
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="school">
+        <h2>szkoła</h2>
+    </div>
+</div>
 {% endblock %}

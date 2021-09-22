@@ -6,23 +6,25 @@ Home Page
 
 {% block content %}
 {% load static %}
-    {% if message %}
-    <div class="container d-flex min-vh-100 testowa">
-    <h2> Thanks for sending a message!</h2>
+{% if message %}
+<div class="container d-flex min-vh-100 testowa">
+    <h2> Thanks {{ message_name }} for sending a message!</h2>
     <p> We recived your email and will respond soon...</p>
-        <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
-    </div>
-    {% else %}
+    <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
+</div>
+{% else %}
 <div class="container d-flex min-vh-100 testowa">
 
     <div class="loader">
+        <img class="img-fluid w-75" src="{% static 'portfolioWeb/images/my-photo.png' %}"
+                             alt="My-photo">
         <span></span>
         <span></span>
         <span></span>
     </div>
     <h1 class="mt-5">Hi! I'm Adam !</h1>
     <h2>I want to be a web developer</h2>
-    <p class="w-50"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and <b>"home"
+    <p class="w-100"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and <b>"home"
         music producer.</b>
         The team work is something that I a specially love. I also like to solve some unconventional exercises and
         challenges.
@@ -135,11 +137,11 @@ Home Page
 </svg>
 
 
-<div id="carouselExampleControls" class="carousel slide w-100 m-auto mb-5" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carousel carousel-dark slide w-100 m-auto mb-5" data-bs-ride="carousel">
     <h2 class="mb-5 mt-5"> Projects </h2>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <div class="card w-50 m-auto bg-black" style="width: 18rem;">
+            <div class="card w-50 m-auto" style="width: 18rem;">
                 <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Drink App</h5>
@@ -151,7 +153,7 @@ Home Page
             </div>
         </div>
         <div class="carousel-item">
-            <div class="card w-50 m-auto bg-black" style="width: 18rem;">
+            <div class="card w-50 m-auto" style="width: 18rem;">
                 <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Drink App</h5>
@@ -162,7 +164,7 @@ Home Page
             </div>
         </div>
         <div class="carousel-item">
-            <div class="card w-50 m-auto bg-black" style="width: 18rem;">
+            <div class="card w-50 m-auto " style="width: 18rem;">
                 <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Drink App</h5>
@@ -174,7 +176,7 @@ Home Page
             </div>
         </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
             data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -194,12 +196,17 @@ Home Page
 <div class="skills-section pb-5 pt-5">
     <div class="container">
         <h2 class="mb-5"> Contact me </h2>
-        <form action="{% url 'index' %}" method="post">
+        <form class="row g-3" action="{% url 'index' %}" method="post">
             {% csrf_token %}
-            <div class="mb-3">
+            <div class="col-md-6 mb-3">
                 <label for="message-email" class="form-label">Email address</label>
-                <input type="email" class="form-control" name ="message-email" id="message-email"
+                <input type="email" class="form-control" name="message-email" id="message-email"
                        placeholder="email-adress@example.com">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="message-name" class="form-label">Your name</label>
+                <input type="text" class="form-control" name="message-name" id="message-name"
+                       placeholder="Enter your name">
             </div>
             <div class="mb-3">
                 <label for="message-subject" class="form-label">Subject</label>
@@ -210,7 +217,7 @@ Home Page
                 <label for="message" class="form-label">Message</label>
                 <textarea class="form-control" id="message" name="message" rows="10"></textarea>
             </div>
-            <input class="btn btn-info "type="submit" value="Send"></input>
+            <input class="btn btn-info col-md-1 m-auto" type="submit" value="Send"></input>
         </form>
     </div>
 </div>

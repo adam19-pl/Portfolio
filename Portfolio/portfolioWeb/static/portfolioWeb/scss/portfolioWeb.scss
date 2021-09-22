@@ -122,6 +122,29 @@ font-size: 1rem;
 
     }
 
+
+    table{
+    font-weight:700;
+    tr{
+         i{
+            color:#a4aab0;
+        }
+
+        .point{
+            color:#479ef5;
+        }
+
+        td{
+            color: #829cbd;
+            font-size: 1.5rem;
+        }
+    }
+
+
+
+
+    }
+
     .footer-test{
     flex-wrap: wrap;
     color: white;
