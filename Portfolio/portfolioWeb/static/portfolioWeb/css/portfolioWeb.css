@@ -5,6 +5,72 @@ body {
   font-size: 1rem;
 }
 
+body .contact-form input {
+  color: black;
+}
+
+body .contact-form textarea {
+  color: black;
+}
+
+body form {
+  display: flex;
+  flex-direction: column;
+}
+
+body form label {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+body form input {
+  color: white;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  height: 3rem;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+body form input:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  body form input {
+    width: 80%;
+  }
+}
+
+body form textarea {
+  color: white;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+body form textarea:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  body form textarea {
+    width: 80%;
+  }
+}
+
 body .testowa {
   flex-direction: column;
   justify-content: center;
@@ -68,6 +134,7 @@ body .testowa .loader span:nth-child(3) {
 }
 
 body .skills-section {
+  color: white;
   min-height: 90vh;
   display: flex;
   justify-content: center;
@@ -128,8 +195,54 @@ body .skills-section .skills .skill-card h3 {
   margin: 1rem 0;
 }
 
+body h2 {
+  position: relative;
+}
+
+body h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 20%;
+  height: 3px;
+  background: #00bbff;
+}
+
+body .content-information {
+  border-radius: 34% 66% 31% 69% / 60% 34% 66% 40%;
+  background: rgba(222, 222, 222, 0.5);
+  min-height: 40vw;
+}
+
+body .content-information .left {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+body .content-information .left img {
+  display: block;
+  width: 70%;
+  height: 70%;
+}
+
+body .content-information .right {
+  width: 50%;
+}
+
 body table {
-  font-weight: 700;
+  width: 75%;
+  font-weight: 500;
+}
+
+body table th {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
 }
 
 body table tr i {
@@ -142,7 +255,26 @@ body table tr .point {
 
 body table tr td {
   color: #829cbd;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 796px) {
+  body table {
+    width: 100%;
+  }
+  body table td {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  body table {
+    width: 100%;
+  }
+  body table tr td {
+    font-size: 1rem;
+  }
 }
 
 body .footer-test {

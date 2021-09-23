@@ -8,7 +8,7 @@ Home Page
 {% load static %}
 {% if message %}
 <div class="container d-flex min-vh-100 testowa">
-    <h2> Thanks {{ message_name }} for sending a message!</h2>
+    <h3> Thanks {{ message_name }} for sending a message!</h3>
     <p> We recived your email and will respond soon...</p>
     <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
 </div>
@@ -23,7 +23,7 @@ Home Page
         <span></span>
     </div>
     <h1 class="mt-5">Hi! I'm Adam !</h1>
-    <h2>I want to be a web developer</h2>
+    <h3>I want to be a web developer</h3>
     <p class="w-100"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and <b>"home"
         music producer.</b>
         The team work is something that I a specially love. I also like to solve some unconventional exercises and
@@ -40,7 +40,7 @@ Home Page
 <div class="skills-section pb-5 pt-5">
     <div class="container">
         <div>
-            <h2> My skills </h2>
+            <h2 class="mb-5"> My skills </h2>
             <div class="skills">
                 <div class="skill-card">
                     <div class="skill-image">
@@ -196,28 +196,10 @@ Home Page
 <div class="skills-section pb-5 pt-5">
     <div class="container">
         <h2 class="mb-5"> Contact me </h2>
-        <form class="row g-3" action="{% url 'index' %}" method="post">
+        <form action="{% url 'index' %}" method="post">
             {% csrf_token %}
-            <div class="col-md-6 mb-3">
-                <label for="message-email" class="form-label">Email address</label>
-                <input type="email" class="form-control" name="message-email" id="message-email"
-                       placeholder="email-adress@example.com">
-            </div>
-            <div class="col-md-6 mb-3">
-                <label for="message-name" class="form-label">Your name</label>
-                <input type="text" class="form-control" name="message-name" id="message-name"
-                       placeholder="Enter your name">
-            </div>
-            <div class="mb-3">
-                <label for="message-subject" class="form-label">Subject</label>
-                <input type="text" class="form-control " name="message-subject" id="message-subject"
-                       placeholder="Subject">
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="10"></textarea>
-            </div>
-            <input class="btn btn-info col-md-1 m-auto" type="submit" value="Send"></input>
+            {{ form }}
+            <input class="btn btn-outline-info col-md-1 m-auto mt-4" type="submit" value="Send"></input>
         </form>
     </div>
 </div>

@@ -7,22 +7,28 @@ About Page
 {% load static %}
 {% block content %}
 <div class="container min-vh-100">
-    <h2> Welcome to About Page ! </h2>
-    <div class="content-information d-flex justify-content-center">
+    <h2 class="mb-5"> About me <span></span></h2>
+    <div class="content-information d-flex align-items-center m-auto mb-5 w-75 flex-column ">
         <div class="left w-50">
-            <p>My photo</p>
+            <img class="img-fluid w-75" src="{% static 'portfolioWeb/images/website.svg' %}"
+                 alt="My-photo">
         </div>
-        <div class="right w-50">
-            <p>Info</p>
+        <div class="right d-flex justify-content-center align-items-center w-50">
+            <p class="w-100"><i><b>I'm from graduate network engineer and from passion a begginer programmer and "home"
+                music
+                producer. The team work is something that I a specially love. I also like to solve some unconventional
+                exercises and challenges. Amibtious and obstinate, always going for realization set goal.</b></i></p>
         </div>
     </div>
-    <h2 class="mb-5">Programming Skills</h2>
-    <p class="mb-5 w-75 m-auto"><i>Why every skill on Junior LVL ?
-        Maybe my skills are more advanced, but I think there's so many thing to learn...
-        Because this is the beggining and my journey with programming just started.
-        I'm hungry for more knowledge and Lvl up my skills!</i></p>
+    <h2 class="mb-5">Programming Skills<span></span></h2>
+    <p class="mb-5 w-75 m-auto"><b><i>Why every skill on Junior LVL ?
+        Maybe my skills are more advanced <span>(check it - just call/mail me)</span> ... there's so many thing to
+        learn...
+        Programming is the only way that I want to following .
+        I love programming. This is the only way that I want to following.
+        I'm hungry for more knowledge and Lvl up my skills!</i></b></p>
 
-    <table class="m-auto w-75">
+    <table class="m-auto mb-5">
         <thead>
         <th class="w-50">Technology</th>
         <th class="w-50">Lvl</th>
@@ -103,8 +109,54 @@ About Page
         </tbody>
     </table>
 
-    <div class="school">
-        <h2>szkoła</h2>
+    <div class="soft-skills mb-5">
+        <h2 class="mb-5">Soft skills</h2>
+
+        <table class="m-auto mb-5">
+            <thead>
+            <th class="w-50">Skill</th>
+            <th class="w-50">Lvl</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Communication</td>
+                <td><i class="fas fa-check"></i>
+                </td>
+            </tr>
+            <tr>
+                <td>Selling</td>
+                <td><i class="fas fa-check"></i>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="Languages mb-5">
+        <h2 class="mb-5">Languages</h2>
+        <table class="m-auto mb-5">
+            <thead>
+            <th class="w-50">Language</th>
+            <th class="w-50">Lvl</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td><i class="fab fa-eng"></i> English</td>
+                <td>B1
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fab fa-eng"></i> Germany</td>
+                <td>Begginer
+                </td>
+            </tr>
+            <tr>
+                <td><i class="fab fa-eng"></i> Polish</td>
+                <td>Fluent
+                </td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 {% endblock %}

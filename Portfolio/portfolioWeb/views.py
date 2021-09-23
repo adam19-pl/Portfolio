@@ -7,27 +7,30 @@ from .forms import ContactForm
 
 def index(request):
     if request.method == 'POST':
-        message_email = request.POST['message-email']
-        message_name = request.POST['message-name']
-        message_subject = request.POST['message-subject']
-        message = request.POST['message']
-
-        mail_message = f"""
-        From:{message_name}
-        Email: {message_email}
-        Message: {message}
-        """
-        # send an email
-        send_mail(
-            message_subject, # subject
-            mail_message, # message
-            message_email, # from email
-            [settings.EMAIL_HOST_USER], # to email
-        )
-        print(message_email, message_name, message_subject, message)
-        return render(request, 'portfolioWeb/index.html', context= {'message': message, 'message_name': message_name })
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            message = form.cleaned_data['message']
+            message_subject = form.cleaned_data['subject']
+            message_email = form.cleaned_data['mail']
+            message_name = form.cleaned_data['name']
+            mail_message = f"""
+            From:{message_name}
+            Email: {message_email}
+            Message: {message}
+            """
+            # send an email
+            send_mail(
+                message_subject,  # subject
+                mail_message,  # message
+                message_email,  # from email
+                [settings.EMAIL_HOST_USER],  # to email
+            )
+            print(message_email, message_name, message_subject, message)
+            return render(request, 'portfolioWeb/index.html', context={'message': message,
+                                                                       'message_name': message_name,})
     else:
-        return render(request, 'portfolioWeb/index.html', )
+        form= ContactForm()
+        return render(request, 'portfolioWeb/index.html', context={'form': form}, )
 
 
 def contact(request):
