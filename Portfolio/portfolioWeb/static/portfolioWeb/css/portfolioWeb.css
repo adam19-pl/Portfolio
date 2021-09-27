@@ -1,84 +1,11 @@
-body {
-  text-align: center;
-  color: black;
-  background-color: #f7f7f7;
-  font-size: 1rem;
-}
-
-body .contact-form input {
-  color: black;
-}
-
-body .contact-form textarea {
-  color: black;
-}
-
-body form {
-  display: flex;
-  flex-direction: column;
-}
-
-body form label {
-  text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-body form input {
-  color: white;
-  text-align: center;
-  margin: 0 auto 1rem auto;
-  height: 3rem;
-  width: 60%;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-bottom: 2px solid #adadad;
-  outline: none;
-  transition: 0.5s;
-}
-
-body form input:focus {
-  background: rgba(0, 0, 0, 0);
-  border-bottom: 2px solid #00bbff;
-}
-
-@media only screen and (max-width: 402px) {
-  body form input {
-    width: 80%;
-  }
-}
-
-body form textarea {
-  color: white;
-  margin: 0 auto 1rem auto;
-  text-align: center;
-  width: 60%;
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
-  border-bottom: 2px solid #adadad;
-  outline: none;
-  transition: 0.5s;
-}
-
-body form textarea:focus {
-  background: rgba(0, 0, 0, 0);
-  border-bottom: 2px solid #00bbff;
-}
-
-@media only screen and (max-width: 402px) {
-  body form textarea {
-    width: 80%;
-  }
-}
-
-body .testowa {
+.testowa {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
 
-body .testowa .loader {
+.testowa .loader {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,21 +14,7 @@ body .testowa .loader {
   height: 400px;
 }
 
-@media only screen and (max-width: 900px) {
-  body .testowa .loader {
-    width: 50vw;
-    height: 50vw;
-  }
-}
-
-@media only screen and (max-width: 402px) {
-  body .testowa .loader {
-    width: 200px;
-    min-height: 200px;
-  }
-}
-
-body .testowa .loader span {
+.testowa .loader span {
   position: absolute;
   top: 0;
   left: 0;
@@ -116,11 +29,11 @@ body .testowa .loader span {
   box-shadow: inset 0px 0px 64px 1px rgba(28, 28, 39, 0.08);
 }
 
-body .testowa .loader span:nth-child(2) {
+.testowa .loader span:nth-child(2) {
   animation-direction: reverse;
 }
 
-body .testowa .loader span:nth-child(3) {
+.testowa .loader span:nth-child(3) {
   animation-duration: 7s;
 }
 
@@ -133,9 +46,22 @@ body .testowa .loader span:nth-child(3) {
   }
 }
 
-body .skills-section {
+@media only screen and (max-width: 900px) {
+  .testowa .loader {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media only screen and (max-width: 402px) {
+  .testowa .loader {
+    width: 200px;
+    min-height: 200px;
+  }
+}
+
+.skills-section {
   color: white;
-  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,56 +69,300 @@ body .skills-section {
   background: linear-gradient(90deg, #00c0ed 0%, #0065ff 50%, #7c00ff 89%);
 }
 
-body .skills-section .skills {
+.skills-section h3 {
+  margin: 1rem 0;
+}
+
+.skills-section .skills {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
 }
 
-body .skills-section .skills .skill-card {
+.skills-section .skills .skill-card {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0.5rem;
   width: 30%;
-  height: 20%;
+  height: 350px;
   border-radius: 1rem;
   -webkit-box-shadow: 8px 8px 24px 0px #42445a;
   -moz-box-shadow: 8px 8px 24px 0px #42445a;
   box-shadow: 8px 8px 24px 0px #42445a;
 }
 
-@media only screen and (max-width: 796px) {
-  body .skills-section .skills .skill-card {
+.skills-section .skills .skill-card .skill-image {
+  width: 60%;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .skills-section .skills .skill-card {
+    width: 30%;
+    height: 300px;
+  }
+  .skills-section .skills .skill-card .skill-image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .skills-section .skills .skill-card {
+    width: 30%;
+    height: 250px;
+  }
+  .skills-section .skills .skill-card .skill-image {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .skills-section .skills .skill-card {
+    width: 30%;
+    height: 200px;
+  }
+  .skills-section .skills .skill-card .skill-image {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .skills-section .skills .skill-card {
     width: 70%;
     height: 250px;
+  }
+  .skills-section .skills .skill-card .skill-image {
+    width: 40%;
+  }
+}
+
+.projects-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-section .container .card {
+  width: 60%;
+}
+
+.projects-section .container .card img {
+  width: 60%;
+}
+
+.contact-form input {
+  color: black;
+}
+
+.contact-form textarea {
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+form input {
+  color: white;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  height: 3rem;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+form input:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  form input {
+    width: 80%;
+  }
+}
+
+form textarea {
+  color: white;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+form textarea:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  form textarea {
+    width: 80%;
+  }
+}
+
+.content-information {
+  border-radius: 34% 66% 31% 69% / 60% 34% 66% 40%;
+  background: rgba(222, 222, 222, 0.5);
+  width: 70%;
+  height: 450px;
+}
+
+.content-information img {
+  display: block;
+  width: 70%;
+  height: 70%;
+}
+
+@media (max-width: 767.98px) {
+  .content-information {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 580px) {
+  .content-information {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+table {
+  width: 75%;
+  font-weight: 500;
+}
+
+table th {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+table tr i {
+  color: #a4aab0;
+}
+
+table tr .point {
+  color: #479ef5;
+}
+
+table tr td {
+  color: #829cbd;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 796px) {
+  table {
+    width: 100%;
+  }
+  table td {
+    font-size: 1rem;
   }
 }
 
 @media only screen and (max-width: 402px) {
-  body .skills-section .skills .skill-card {
-    width: 70%;
-    height: 200px;
+  table {
+    width: 100%;
+  }
+  table tr th {
+    font-size: 1rem;
+  }
+  table tr td {
+    font-size: 1rem;
   }
 }
 
-body .skills-section .skills .skill-card .skill-image {
+.container .btn-send {
+  font-weight: bold;
+  width: 80px;
+}
+
+.container .btn-send:hover {
+  color: white;
+}
+
+.container .contact-socials div {
+  width: 30%;
+}
+
+.container .contact-socials div img {
+  width: 60px;
+}
+
+@media only screen and (max-width: 580px) {
+  .container .contact-socials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .contact-socials div {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+  .container .contact-socials div img {
+    width: 40px;
+  }
+}
+
+.footer-test {
+  flex-wrap: wrap;
+  color: white;
+  font-size: 0.8rem;
+  background: #00c0ed;
+  background: linear-gradient(90deg, #00c0ed 0%, #0065ff 50%, #7c00ff 89%);
+}
+
+.footer-test h5 {
+  margin: 0;
+}
+
+.footer-test a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+
+.footer-test ul {
+  margin: 0;
   padding: 0;
-  width: 50%;
-  margin: 0 auto;
 }
 
-body .skills-section .skills .skill-card .skill-image img {
-  display: block;
-  margin: 1rem auto;
-  width: 80%;
-  height: 80%;
+.footer-test ul li {
+  padding: 0.5rem;
+  list-style-type: none;
 }
 
-body .skills-section .skills .skill-card h3 {
-  margin: 1rem 0;
+@media only screen and (max-width: 580px) {
+  .footer-test ul {
+    flex-direction: column;
+  }
+}
+
+body {
+  text-align: center;
+  color: black;
+  background-color: #f7f7f7;
+  font-size: 1rem;
 }
 
 body h2 {
@@ -211,101 +381,7 @@ body h2::after {
   background: #00bbff;
 }
 
-body .content-information {
-  border-radius: 34% 66% 31% 69% / 60% 34% 66% 40%;
-  background: rgba(222, 222, 222, 0.5);
-  min-height: 40vw;
-}
-
-body .content-information .left {
-  display: flex;
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-body .content-information .left img {
-  display: block;
-  width: 70%;
-  height: 70%;
-}
-
-body .content-information .right {
-  width: 50%;
-}
-
-body table {
-  width: 75%;
-  font-weight: 500;
-}
-
-body table th {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding-bottom: 1rem;
-}
-
-body table tr i {
-  color: #a4aab0;
-}
-
-body table tr .point {
-  color: #479ef5;
-}
-
-body table tr td {
-  color: #829cbd;
-  font-size: 1.2rem;
-  padding: 0.5rem 0;
-}
-
-@media only screen and (max-width: 796px) {
-  body table {
-    width: 100%;
-  }
-  body table td {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (max-width: 402px) {
-  body table {
-    width: 100%;
-  }
-  body table tr td {
-    font-size: 1rem;
-  }
-}
-
-body .footer-test {
-  flex-wrap: wrap;
-  color: white;
-  font-size: 0.8rem;
-  background: #00c0ed;
-  background: linear-gradient(101deg, #00c0ed 0%, #0065ff 50%, #7c00ff 89%);
-}
-
-body .footer-test h5 {
-  margin: 0;
-}
-
-body .footer-test a {
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: #f2f2f2;
-}
-
-body .footer-test ul {
-  margin: 0;
-  padding: 0;
-}
-
-body .footer-test ul li {
-  padding: 0.5rem;
-  list-style-type: none;
-}
-
-.button-read-me {
+body .button-read-me {
   text-decoration: none;
   color: white;
   padding: 0.6rem;
@@ -316,7 +392,7 @@ body .footer-test ul li {
   transition: 600ms;
 }
 
-.button-read-me:hover {
+body .button-read-me:hover {
   color: white;
   background: #05729A;
 }

@@ -1,0 +1,32 @@
+.footer-test{
+    flex-wrap: wrap;
+    color: white;
+    font-size: 0.8rem;
+    background: rgb(0,192,237);
+    background: linear-gradient(90deg, rgba(0,192,237,1) 0%, rgba(0,101,255,1) 50%, rgba(124,0,255,1) 89%);
+        h5{
+        margin:0;
+        }
+
+        a{
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #f2f2f2;
+        }
+
+        ul{
+        margin:0;
+        padding: 0;
+
+            li{
+            padding: 0.5rem;
+            list-style-type: none;
+            }
+        }
+
+                @media only screen and (max-width: 580px) {
+         ul{
+         flex-direction: column;
+         }
+        }
+}

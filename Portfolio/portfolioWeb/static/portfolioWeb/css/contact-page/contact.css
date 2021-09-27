@@ -1,0 +1,30 @@
+.container .btn-send {
+  font-weight: bold;
+  width: 80px;
+}
+
+.container .btn-send:hover {
+  color: white;
+}
+
+.container .contact-socials div {
+  width: 30%;
+}
+
+.container .contact-socials div img {
+  width: 60px;
+}
+
+@media only screen and (max-width: 580px) {
+  .container .contact-socials {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .contact-socials div {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+  .container .contact-socials div img {
+    width: 40px;
+  }
+}

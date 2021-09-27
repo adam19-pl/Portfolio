@@ -13,196 +13,202 @@ Home Page
     <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
 </div>
 {% else %}
-<div class="container d-flex min-vh-100 testowa">
-
-    <div class="loader">
-        <img class="img-fluid w-75" src="{% static 'portfolioWeb/images/my-photo.png' %}"
-                             alt="My-photo">
-        <span></span>
-        <span></span>
-        <span></span>
+<section class="about-me-section">
+    <div class="container d-flex min-vh-100 testowa">
+        <div class="loader">
+            <img class="img-fluid w-75" src="{% static 'portfolioWeb/images/my-photo.png' %}"
+                 alt="My-photo">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="mt-5">Hi! I'm Adam !</h1>
+        <h3>I want to be a web developer</h3>
+        <p class="w-100"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and
+            <b>"home"
+                music producer.</b>
+            The team work is something that I a specially love. I also like to solve some unconventional exercises and
+            challenges.
+            <b>Amibtious and obstinate,</b> always going for realization <b>set goal.</b></i>
+        </p>
+        <a class="mt-4 button-read-me" href="{% url 'about' %}"> Read more </a>
     </div>
-    <h1 class="mt-5">Hi! I'm Adam !</h1>
-    <h3>I want to be a web developer</h3>
-    <p class="w-100"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and <b>"home"
-        music producer.</b>
-        The team work is something that I a specially love. I also like to solve some unconventional exercises and
-        challenges.
-        <b>Amibtious and obstinate,</b> always going for realization <b>set goal.</b></i>
-    </p>
-    <a class="mt-4 button-read-me" href="{% url 'about' %}"> Read more </a>
-</div>
+</section>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,64L60,58.7C120,53,240,43,360,64C480,85,600,139,720,144C840,149,960,107,1080,101.3C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
 </svg>
-<div class="skills-section pb-5 pt-5">
-    <div class="container">
-        <div>
-            <h2 class="mb-5"> My skills </h2>
-            <div class="skills">
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/file.svg' %}"
-                             alt="Python icon image">
-                    </div>
-                    <h3>Python</h3>
+<section class="skills-section">
+    <div class="container mb-5 mt-5 min-vh-100">
+        <h2 class="mb-5"> My skills </h2>
+        <div class="skills">
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/file.svg' %}"
+                         alt="Python icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/django.svg' %}"
-                             alt="Django icon image">
-                    </div>
-                    <h3>Django</h3>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/django.svg' %}"
+                         alt="Django icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/logoDRF.png' %}"
-                             alt="Python icon image">
-                    </div>
-                    <h3>Django Rest Framework</h3>
+                <h3>Django</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/logoDRF.png' %}"
+                         alt="Python icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/javascript.svg' %}"
-                             alt="Javascript icon image">
-                    </div>
-                    <h3>Javascript</h3>
+                <h3>Django Rest Framework</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/javascript.svg' %}"
+                         alt="Javascript icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/react.svg' %}"
-                             alt="React icon image">
-                    </div>
-                    <h3>React</h3>
+                <h3>Javascript</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/react.svg' %}"
+                         alt="React icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/sql-server.svg' %}"
-                             alt="SQL icon image">
-                    </div>
-                    <h3>SQL</h3>
+                <h3>React</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/sql-server.svg' %}"
+                         alt="SQL icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/github.svg' %}"
-                             alt="Git icon image">
-                    </div>
-                    <h3>Git & Github</h3>
+                <h3>SQL</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/github.svg' %}"
+                         alt="Git icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/unity-brands.svg' %}"
-                             alt="Unity icon image">
-                    </div>
-                    <h3>Unity</h3>
+                <h3>Git & Github</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/unity-brands.svg' %}"
+                         alt="Unity icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/linux.svg' %}"
-                             alt="Linux icon image">
-                    </div>
-                    <h3>Linux</h3>
+                <h3>Unity</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/linux.svg' %}"
+                         alt="Linux icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/html.svg' %}"
-                             alt="HTML icon image">
-                    </div>
-                    <h3>HTML5</h3>
+                <h3>Linux</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/html.svg' %}"
+                         alt="HTML icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/css-3.svg' %}"
-                             alt="CSS icon image">
-                    </div>
-                    <h3>CSS</h3>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/css-3.svg' %}"
+                         alt="CSS icon image">
                 </div>
-                <div class="skill-card">
-                    <div class="skill-image">
-                        <img class="img-fluid" src="{% static 'portfolioWeb/images/sass.svg' %}"
-                             alt="SASS icon image">
-                    </div>
-                    <h3>SASS</h3>
+                <h3>CSS</h3>
+            </div>
+            <div class="skill-card">
+                <div class="skill-image">
+                    <img class="img-fluid" src="{% static 'portfolioWeb/images/sass.svg' %}"
+                         alt="SASS icon image">
                 </div>
+                <h3>SASS</h3>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,160L60,144C120,128,240,96,360,96C480,96,600,128,720,154.7C840,181,960,203,1080,208C1200,213,1320,203,1380,197.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
 </svg>
 
-
-<div id="carouselExampleControls" class="carousel carousel-dark slide w-100 m-auto mb-5" data-bs-ride="carousel">
-    <h2 class="mb-5 mt-5"> Projects </h2>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="card w-50 m-auto" style="width: 18rem;">
-                <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Drink App</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+<section class="projects-section">
+    <div class="container">
+        <div id="carouselExampleControls" class="carousel carousel-dark slide w-100 m-auto mb-5" data-bs-ride="carousel">
+        <h2 class="mb-5 mt-5"> Projects </h2>
+        <div class="carousel-inner ">
+            <div class="carousel-item active">
+                <div class="card m-auto">
+                    <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top m-auto mt-5"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Drink App</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card m-auto">
+                    <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top  m-auto mt-5"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Drink App</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card m-auto">
+                    <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top m-auto mt-5"
+                         alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Drink App</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <div class="card w-50 m-auto" style="width: 18rem;">
-                <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Drink App</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
-                    <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <div class="card w-50 m-auto " style="width: 18rem;">
-                <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top w-75 m-auto" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Drink App</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the
-                        card's content.</p>
-                    <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
-                </div>
-            </div>
-        </div>
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon " aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-
-</div>
-<a class="button-read-me" href="{% url 'projects' %}"> More Info </a>
+    </div>
+    <a class="button-read-me" href="{% url 'projects' %}"> More Info </a>
+</section>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,64L60,58.7C120,53,240,43,360,64C480,85,600,139,720,144C840,149,960,107,1080,101.3C1200,96,1320,128,1380,144L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
 </svg>
-<div class="skills-section pb-5 pt-5">
+<section class="skills-section pb-5 pt-5">
     <div class="container">
         <h2 class="mb-5"> Contact me </h2>
         <form action="{% url 'index' %}" method="post">
             {% csrf_token %}
             {{ form }}
-            <input class="btn btn-outline-info col-md-1 m-auto mt-4" type="submit" value="Send"></input>
+            <input class="btn btn-outline-info col-md-1 m-auto mt-4 btn-send" type="submit" value="Send"></input>
         </form>
     </div>
-</div>
+</section>
 
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"

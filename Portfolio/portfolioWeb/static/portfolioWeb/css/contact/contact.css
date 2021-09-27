@@ -1,0 +1,65 @@
+.contact-form input {
+  color: black;
+}
+
+.contact-form textarea {
+  color: black;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+form input {
+  color: white;
+  text-align: center;
+  margin: 0 auto 1rem auto;
+  height: 3rem;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+form input:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  form input {
+    width: 80%;
+  }
+}
+
+form textarea {
+  color: white;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  width: 60%;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  transition: 0.5s;
+}
+
+form textarea:focus {
+  background: rgba(0, 0, 0, 0);
+  border-bottom: 2px solid #00bbff;
+}
+
+@media only screen and (max-width: 402px) {
+  form textarea {
+    width: 80%;
+  }
+}

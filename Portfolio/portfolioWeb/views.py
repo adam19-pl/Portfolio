@@ -41,6 +41,19 @@ def contact(request):
             message_subject = form.cleaned_data['subject']
             message_email = form.cleaned_data['mail']
             message_name = form.cleaned_data['name']
+
+            mail_message = f"""
+            From:{message_name}
+            Email: {message_email}
+            Message: {message}
+            """
+            # send an email
+            send_mail(
+                message_subject,  # subject
+                mail_message,  # message
+                message_email,  # from email
+                [settings.EMAIL_HOST_USER],  # to email
+            )
             print(message, message_subject, message_email, message_name)
             return render(request, 'portfolioWeb/contact.html', {'message_name': message_name})
     else:
