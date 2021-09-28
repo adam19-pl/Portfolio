@@ -1,9 +1,35 @@
 {% extends 'portfolioWeb/base.html' %}
 
 {% block title %}
- Projects Page
+Projects Page
 {% endblock %}
-
+{% load static %}
 {% block content %}
-<h2> Welcome to Projects Page ! </h2>
+<div class="container testowa">
+    <h2 class="mb-5">Projects </h2>
+    <h4>Here are some of my projects</h4>
+    <p class="mb-5">You can check everything what you want :)</p>
+    <div class="projects d-flex align-items-center flex-column">
+        <div class="card text-center mb-5 " style="width: 80%;">
+            <div class="card-body">
+                <img src="{% static 'portfolioWeb/images/DrinkApp2.png' %}" class="card-img-top" alt="...">
+                <h5 class="card-title">DrinkApp</h5>
+                <p class="card-text">You can create account and login, add some recipes and upload an
+                    image
+                    or search  recipes in search engine. To create this app I used : Python, Django, CSS, HTML and
+                    deployment app on AWS
+                </p>
+                <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Check</a>
+            </div>
+        </div>
+        <div class="card text-center" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">This Portfolio</h5>
+                <p class="card-text">My business card. To create this I used : Python, Django, SASS, HTML, Bootstrap, JS and deploy app on Heroku.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
