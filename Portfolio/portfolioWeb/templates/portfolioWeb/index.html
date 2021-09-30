@@ -22,16 +22,17 @@ Home Page
             <span></span>
             <span></span>
         </div>
-        <h1 class="mt-5">Hi! I'm Adam !</h1>
-        <h3>I want to be a web developer</h3>
-        <p class="w-100"><i>I'm from graduate <b>network engineer</b> and from passion a begginer <b>programmer</b> and
-            <b>"home"
-                music producer.</b>
+        <h1 class="mt-5" id="indexAboutHeader">Hi! I'm Adam !</h1>
+        <h3 id="indexAboutHeader3">I want to be a web developer</h3>
+        <p class="w-100"><i id="indexAboutInformation">I'm from graduate network engineer and from passion a begginer
+            programmer and
+            "home"
+            music producer.
             The team work is something that I a specially love. I also like to solve some unconventional exercises and
             challenges.
-            <b>Amibtious and obstinate,</b> always going for realization <b>set goal.</b></i>
+            Amibtious and obstinate,always going for realization set goal.</i>
         </p>
-        <a class="mt-4 button-read-me" href="{% url 'about' %}"> Read more </a>
+        <a class="mt-4 button-read-me" href="{% url 'about' %}" id="indexAboutButton"> Read more </a>
     </div>
 </section>
 
@@ -41,7 +42,7 @@ Home Page
 </svg>
 <section class="skills-section">
     <div class="container mb-5 mt-5 min-vh-100">
-        <h2 class="mb-5"> My skills </h2>
+        <h2 class="mb-5" id="indexSkillsHeader"> My skills </h2>
         <div class="skills">
             <div class="skill-card">
                 <div class="skill-image">
@@ -138,62 +139,66 @@ Home Page
 
 <section class="projects-section">
     <div class="container">
-        <div id="carouselExampleControls" class="carousel carousel-dark slide w-100 m-auto mb-5" data-bs-ride="carousel">
-        <h2 class="mb-5 mt-5"> Projects </h2>
-        <div class="carousel-inner ">
-            <div class="carousel-item active">
-                <div class="card m-auto">
-                    <img src="{% static 'portfolioWeb/images/DrinkApp2.png' %}" class="card-img-top m-auto mt-5"
-                         alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Drink App</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+        <div id="carouselExampleControls" class="carousel carousel-dark slide w-100 m-auto mb-5"
+             data-bs-ride="carousel">
+            <h2 class="mb-5 mt-5" id="indexProjectsHeader"> Projects </h2>
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <div class="card m-auto">
+                        <img src="{% static 'portfolioWeb/images/DrinkApp2.png' %}" class="card-img-top m-auto mt-5"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Drink App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's content.</p>
+                            <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card m-auto">
+                        <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top  m-auto mt-5"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Drink App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's content.</p>
+                            <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card m-auto">
+                        <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top m-auto mt-5"
+                             alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Drink App</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of
+                                the
+                                card's content.</p>
+                            <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="card m-auto">
-                    <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top  m-auto mt-5"
-                         alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Drink App</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="card m-auto">
-                    <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top m-auto mt-5"
-                         alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Drink App</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                <span class="carousel-control-next-icon " aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-            <span class="carousel-control-next-icon " aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
     </div>
-    </div>
-    <a class="button-read-me" href="{% url 'projects' %}"> More Info </a>
+    <a id="indexProjectsButton"class="button-read-me" href="{% url 'projects' %}"> More Info </a>
 </section>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220">
     <path fill="url(#gradient)" fill-opacity="1"
@@ -201,11 +206,11 @@ Home Page
 </svg>
 <section class="skills-section pb-5 pt-5">
     <div class="container">
-        <h2 class="mb-5"> Contact me </h2>
+        <h2 class="mb-5" id="indexContactHeader"> Contact me </h2>
         <form action="{% url 'index' %}" method="post">
             {% csrf_token %}
             {{ form }}
-            <input class="btn btn-outline-info col-md-1 m-auto mt-4 btn-send" type="submit" value="Send"></input>
+            <input class="btn btn-outline-info col-md-1 m-auto mt-4 btn-send" id="indexContactButton" type="submit" value="Send"></input>
         </form>
     </div>
 </section>

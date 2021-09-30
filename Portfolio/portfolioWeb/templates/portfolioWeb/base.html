@@ -31,28 +31,28 @@
             <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav justify-content-around w-100">
                     <li class="nav-item">
-                        <a class="nav-link nav-link-home" aria-current="page" href="{% url 'index' %}">Home</a>
+                        <a class="nav-link nav-link-home" id="menuHome" aria-current="page" href="{% url 'index' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-about" href="{% url 'about' %}">About</a>
+                        <a class="nav-link nav-link-about" id="menuAbout" href="{% url 'about' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-contact" href="{% url 'contact' %}">Contact</a>
+                        <a class="nav-link nav-link-contact" id="menuContact" href="{% url 'contact' %}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-projects" href="{% url 'projects' %}">Projects</a>
+                        <a class="nav-link nav-link-projects" id="menuProjects" href="{% url 'projects' %}">Projects</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle nav-link-languages" href="#" id="navbarDarkDropdownMenuLink" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Languages
+                            <span id="menuLanguages">Languages</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark text-center languagesWrap"
+                        <ul class="dropdown-menu dropdown-menu-dark text-center languageWrapper"
                             aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item active" href="#"  language="english">English <img class="img-fluid language-image-icon"
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('eng')"><span id="menuLanguageEnglish">English</span> <img class="img-fluid language-image-icon"
                                                                                src="{% static 'portfolioWeb/images/united-kingdom.png'%}" style="width:20px"></a>
                             </li>
-                            <li><a class="dropdown-item" href="#" language="polish">Poland <img class="img-fluid language-image-icon"
+                            <li><a class="dropdown-item" href="#" onclick="changeLanguage('pl')"><span id="menuLanguagePolish">Poland</span> <img class="img-fluid language-image-icon"
                                                                               src="{% static 'portfolioWeb/images/poland.png'%}" style="width:20px"></a>
                             </li>
                         </ul>
@@ -76,18 +76,19 @@
           d="M0,96L60,101.3C120,107,240,117,360,117.3C480,117,600,107,720,101.3C840,96,960,96,1080,106.7C1200,117,1320,139,1380,149.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
     <footer>
         <div class="footer-test">
-            <h5>Contact Me on : </h5>
+            <h5 id="footerContactHeader">Contact Me on : </h5>
             <ul class="d-flex justify-content-center">
                 <li><a href="#">LinkedIn - <i class="fab fa-linkedin"></i></a></li>
                 <li><a href="#">Github - <i class="fab fa-github"></i></a></li>
                 <li><a href="#">Email - <i class="fas fa-envelope"></i></a></li>
-                <li><a href="#">Phone - <i class="fas fa-phone"></i></a></li>
+                <li><a href="#"><span id="footerContactPhone">Phone</span> - <i class="fas fa-phone"></i></a></li>
             </ul>
         </div>
-        <div class="footer-test pb-4">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from
+        <div class="footer-test pb-4"><span id="footerIconsCredential">Icons made by</span> <a href="https://www.freepik.com" title="Freepik">Freepik</a> <span id="footerIconsCredentialFrom2">from</span>
             <a
                     href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> &
-            <a href="https://www.fontawsome.com" title="Font Awsome">Font Awsome</a> from
+            <a href="https://www.fontawsome.com" title="Font Awsome">Font Awsome</a> <span id="footerIconsCredentialFrom">from</span>
+
             <a href="https://fontawesome.com/" title="Font Awsome">www.fontawsome.com</a></div>
     </footer>
 </svg>
