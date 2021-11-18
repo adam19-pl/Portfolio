@@ -5,6 +5,10 @@
   height: 450px;
 }
 
+.content-information p {
+  width: 80%;
+}
+
 .content-information img {
   display: block;
   width: 70%;
@@ -22,6 +26,9 @@
   .content-information {
     width: 100%;
     height: 300px;
+  }
+  .content-information p {
+    width: 100%;
   }
 }
 

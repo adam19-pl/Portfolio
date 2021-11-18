@@ -1,0 +1,39 @@
+.container .projects .card {
+  width: 60%;
+}
+
+.container .projects .card img {
+  margin-bottom: 1.5rem;
+  width: 70%;
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .projects .card {
+    width: 80%;
+  }
+  .container .projects .card img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .container .projects .card {
+    width: 80%;
+  }
+  .container .projects .card img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container .projects .card {
+    width: 90%;
+  }
+  .container .projects .card img {
+    width: 150px;
+    height: 100px;
+  }
+}

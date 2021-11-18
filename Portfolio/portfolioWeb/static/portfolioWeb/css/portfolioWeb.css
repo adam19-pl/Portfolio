@@ -147,11 +147,33 @@
 }
 
 .projects-section .container .card {
-  width: 60%;
+  width: 80%;
 }
 
 .projects-section .container .card img {
   width: 60%;
+  height: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .projects-section .container .card img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .projects-section .container .card img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 368px) {
+  .projects-section .container .card img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 .contact-form input {
@@ -227,6 +249,10 @@ form textarea:focus {
   height: 450px;
 }
 
+.content-information p {
+  width: 80%;
+}
+
 .content-information img {
   display: block;
   width: 70%;
@@ -244,6 +270,9 @@ form textarea:focus {
   .content-information {
     width: 100%;
     height: 300px;
+  }
+  .content-information p {
+    width: 100%;
   }
 }
 
@@ -321,6 +350,46 @@ table tr td {
   }
   .container .contact-socials div img {
     width: 40px;
+  }
+}
+
+.container .projects .card {
+  width: 60%;
+}
+
+.container .projects .card img {
+  margin-bottom: 1.5rem;
+  width: 70%;
+  height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container .projects .card {
+    width: 80%;
+  }
+  .container .projects .card img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media only screen and (max-width: 568px) {
+  .container .projects .card {
+    width: 80%;
+  }
+  .container .projects .card img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container .projects .card {
+    width: 90%;
+  }
+  .container .projects .card img {
+    width: 150px;
+    height: 100px;
   }
 }
 
