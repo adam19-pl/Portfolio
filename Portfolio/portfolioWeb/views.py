@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail
 from django.conf import settings
 from .forms import ContactForm
@@ -28,8 +27,9 @@ def index(request):
             print(message_email, message_name, message_subject, message)
             return render(request, 'portfolioWeb/index.html', context={'message': message,
                                                                        'message_name': message_name,})
+        return render(request, 'portfolioWeb/index.html', context={'form': form})
     else:
-        form= ContactForm()
+        form = ContactForm()
         return render(request, 'portfolioWeb/index.html', context={'form': form}, )
 
 

@@ -7,11 +7,11 @@ Home Page
 {% block content %}
 {% load static %}
 {% if message %}
-<div class="container d-flex min-vh-100 testowa">
-    <h3> Thanks {{ message_name }} for sending a message!</h3>
-    <p> We recived your email and will respond soon...</p>
-    <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
-</div>
+    <div class="container d-flex min-vh-100 testowa" id="indexMailInformation">
+        <h3><span id="indexMailMessageInformationOne">Thanks</span> {{ message_name }}<span id="indexMailMessageInformationTwo"> for sending a message!</span></h3>
+        <p id="indexMailMessageDescription"> We recived your email and will respond soon...</p>
+        <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
+    </div>
 {% else %}
 <section class="about-me-section">
     <div class="container d-flex min-vh-100 testowa">
@@ -149,11 +149,9 @@ Home Page
                              alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Drink App</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
+                            <p class="card-text" id="indexProjectDrinkAppDescription">Create account or login and add some drinks recipes!</p>
                             <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                            <a href="https://github.com/adam19-pl/DrinkApp" class="btn btn-primary">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -163,25 +161,20 @@ Home Page
                              alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Poisson App</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
+                            <p class="card-text" id="indexProjectPoissonAppDescription">Predict the result of the match. Just choose the right teams</p>
                             <a href="https://poisson-app.herokuapp.com/" class="btn btn-primary">Poisson App</a>
+                            <a href="https://github.com/adam19-pl/PoissonDistribution" class="btn btn-primary">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="card m-auto">
-                        <img src="{% static 'portfolioWeb/images/file.svg' %}" class="card-img-top m-auto mt-5"
+                        <img src="{% static 'portfolioWeb/images/github.svg' %}" class="card-img-top m-auto mt-5"
                              alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Drink App</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the
-                                card's content.</p>
-                            <a href="https://adam.django-code-brainers.com/" class="btn btn-primary">Drink App</a>
+                            <h5 class="card-title">Portfolio</h5>
+                            <p class="card-text" id="indexProjectPortfolioDescription">My business card. Check the code on GitHub.</p>
+                            <a href="https://github.com/adam19-pl/Portfolio" class="btn btn-primary">Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -219,6 +212,12 @@ Home Page
     <path fill="url(#gradient)" fill-opacity="1"
           d="M0,160L60,144C120,128,240,96,360,96C480,96,600,128,720,154.7C840,181,960,203,1080,208C1200,213,1320,203,1380,197.3L1440,192L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
 </svg>
+<section class="pt-5 chanceSection">
+    <div class="container">
+    <h3 class="mt-5" id="indexChanceSectionHeader">Give me a chance and contact with me.</h3>
+        <p id="indexChanceSectionParagraph"><i>I'll show you that it was worth it!</i></p>
+    </div>
+</section>
 {% endif %}
 
 {% endblock %}

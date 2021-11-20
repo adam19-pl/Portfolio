@@ -1,3 +1,4 @@
+
 var language ={
     eng:{
     test:"work",
@@ -22,8 +23,13 @@ var language ={
     indexAboutButton:"Czytaj więcej",
     indexSkillsHeader:'Moje umiejętności',
     indexProjectsHeader:'Projekty',
+    indexProjectPortfolioDescription:'Moja wizytówka. Możesz sprawdzić kod na GitHub.',
+    indexProjectPoissonAppDescription:'Przewiduj wynik meczu. Wystarczy wybrać odpowiednie drużyny.',
+    indexProjectDrinkAppDescription:'Stwórz konto lub zaloguj się i dodaj przepisy drinków.',
     indexProjectsButton:'Więcej Informacji',
     indexContactHeader:'Skontaktuj się ze mną',
+    indexChanceSectionHeader:'Dajcie mi szanse i skontaktujcię się ze mną.',
+    indexChanceSectionParagraph:'Pokażę Wam, że było warto!',
     id_message:'Wiadomość',
     id_name: "Twoje imię",
     id_namePlaceholder: "Wprowadź swoję imię",
@@ -32,6 +38,9 @@ var language ={
     id_subject:"Temat",
     id_subjectPlaceholder:"Wprowadź temat",
     indexContactButton:"Wyślij",
+    contactMailMessageInformationOne:'Dziękuję',
+    contactMailMessageInformationTwo:', za przesłanie wiadomości!',
+    contactMailMessageDescription:'Otrzymaliśmy Twoją wiadomość i niedługo na nią odpowiemy...' ,
     contactHeader:"Skontaktuj się ze mną poprzez :",
     contactLinkedIn:"Profil LinkedIn",
     contactGithub:"Profil GitHub",
@@ -70,7 +79,8 @@ var language ={
     ' lub wyszykać przepis w wyszukiwarce. Do stworzenia tej aplikacji użyłem: Python, Django, CSS, HTML i wdrożyłem ją na AWS.' ,
     projectTwoDescription:'Moja wizytówka. Do stworzenia tego projektu użyłem: Python, Django, SASS, HTML, JS, Bootstrap i '+
     'wdrożyłem go za pomocą platformy Heroku,',
-    },
+    projectThreeDescription :'Chcesz przewidzieć wynik meczu? Wypróbuj tą aplikację. Do jej stworzenia użyłem : Python, Django, SASS, HTML, Bootstrap, JS, ParticlesJS, ChartJS, api-football i wdrożyłem na Heroku.',
+    }
 }
 
 function changeLanguage(lang) {
@@ -80,9 +90,10 @@ function changeLanguage(lang) {
 
 // Check if a hash value exists in the URL
 if (localStorage.Language) {
+
   // Set the content of the webpage
   // depending on the hash value
-  if (localStorage.Language == "pl") {
+  if (localStorage.Language == "pl"){
     menuHome.textContent = language.pl.menuHome;
     menuAbout.textContent = language.pl.menuAbout;
     menuContact.textContent = language.pl.menuContact;
@@ -96,6 +107,10 @@ if (localStorage.Language) {
     footerIconsCredentialFrom2.textContent = language.pl.footerIconsCredentialFrom;
     footerIconsCredential.textContent = language.pl.footerIconsCredential;
     if(location.pathname === "/"){
+        if(typeof indexMailInformation === undefined){
+        indexMailMessageInformationOne.textContent = language.pl.contactMailMessageInformationOne;
+        indexMailMessageInformationTwo.textContent = language.pl.contactMailMessageInformationTwo;
+        }else{
         indexAboutHeader.textContent = language.pl.indexAboutHeader;
         indexAboutHeader3.textContent = language.pl.indexAboutHeader3;
         indexAboutInformation.textContent = language.pl.indexAboutInformation;
@@ -103,7 +118,12 @@ if (localStorage.Language) {
         indexSkillsHeader.textContent = language.pl.indexSkillsHeader;
         indexProjectsHeader.textContent = language.pl.indexProjectsHeader;
         indexProjectsButton.textContent = language.pl.indexProjectsButton;
+        indexProjectPoissonAppDescription.textContent = language.pl.indexProjectPoissonAppDescription;
+        indexProjectDrinkAppDescription.textContent = language.pl.indexProjectDrinkAppDescription;
+        indexProjectPortfolioDescription.textContent = language.pl.indexProjectPortfolioDescription;
         indexContactHeader.textContent = language.pl.indexContactHeader;
+        indexChanceSectionHeader.textContent = language.pl.indexChanceSectionHeader;
+        indexChanceSectionParagraph.textContent = language.pl.indexChanceSectionParagraph;
         id_name.labels[0].textContent = language.pl.id_name;
         id_name.placeholder = language.pl.id_namePlaceholder;
         id_message.labels[0].textContent = language.pl.id_message;
@@ -114,7 +134,12 @@ if (localStorage.Language) {
         id_subject.placeholder = language.pl.id_subjectPlaceholder;
         indexContactButton.value= language.pl.indexContactButton;
         }
+        }
     else if(location.pathname === "/contact/"){
+        if(typeof contactMailInformation===undefined){
+        mailMessageInformationOne.textContent = language.pl.contactMailMessageInformationOne;
+        mailMessageInformationTwo.textContent = language.pl.contactMailMessageInformationTwo;
+        }else{
         contactHeader.textContent = language.pl.contactHeader;
         contactLinkedIn.textContent = language.pl.contactLinkedIn;
         contactGithub.textContent = language.pl.contactGithub;
@@ -129,6 +154,7 @@ if (localStorage.Language) {
         id_subject.labels[0].textContent = language.pl.id_subject;
         id_subject.placeholder = language.pl.id_subjectPlaceholder;
         contactButton.value = language.pl.contactButton;
+        }
     }
     else if(location.pathname ==="/about/"){
     aboutHeader.textContent = language.pl.aboutHeader;
@@ -153,12 +179,13 @@ if (localStorage.Language) {
     aboutLanguagePolish.textContent = language.pl.aboutLanguagePolish;
     aboutLanguageLvlPolish.textContent = language.pl.aboutLanguageLvlPolish;
     }
-    else if(location.pathname==='/projects/'){
+    else if(location.pathname ==='/projects/'){
      projectsHeader.textContent = language.pl.projectsHeader;
      projectsSubtitle.textContent = language.pl.projectsSubtitle;
      projectsDescription.textContent = language.pl.projectsDescription;
      projectOneDescription.textContent = language.pl.projectOneDescription;
      projectTwoDescription.textContent = language.pl.projectTwoDescription;
+     projectThreeDescription.textContent = language.pl.projectThreeDescription;
     }
    }
 }

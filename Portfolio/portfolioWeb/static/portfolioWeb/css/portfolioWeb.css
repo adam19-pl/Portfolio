@@ -176,6 +176,13 @@
   }
 }
 
+.mail-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .contact-form input {
   color: black;
 }
@@ -187,6 +194,16 @@
 form {
   display: flex;
   flex-direction: column;
+}
+
+form .errorlist {
+  padding: 0;
+}
+
+form .errorlist li {
+  list-style: none;
+  color: red;
+  font-weight: bold;
 }
 
 form label {
@@ -391,6 +408,9 @@ table tr td {
     width: 150px;
     height: 100px;
   }
+  .container .projects .card a {
+    margin-bottom: 1rem;
+  }
 }
 
 .footer-test {
@@ -409,6 +429,23 @@ table tr td {
   font-size: 1.2rem;
   text-decoration: none;
   color: #f2f2f2;
+  position: relative;
+}
+
+.footer-test a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  top: 110%;
+  left: 0px;
+  background: white;
+  transition: 0.8s;
+}
+
+.footer-test a:hover::before {
+  width: 100%;
 }
 
 .footer-test ul {

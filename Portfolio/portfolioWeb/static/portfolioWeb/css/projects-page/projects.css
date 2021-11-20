@@ -36,4 +36,7 @@
     width: 150px;
     height: 100px;
   }
+  .container .projects .card a {
+    margin-bottom: 1rem;
+  }
 }

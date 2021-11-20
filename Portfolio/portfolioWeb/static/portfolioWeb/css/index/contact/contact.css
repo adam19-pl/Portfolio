@@ -1,3 +1,10 @@
+.mail-information {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .contact-form input {
   color: black;
 }
@@ -9,6 +16,16 @@
 form {
   display: flex;
   flex-direction: column;
+}
+
+form .errorlist {
+  padding: 0;
+}
+
+form .errorlist li {
+  list-style: none;
+  color: red;
+  font-weight: bold;
 }
 
 form label {

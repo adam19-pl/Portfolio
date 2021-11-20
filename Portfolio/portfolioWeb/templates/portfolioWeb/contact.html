@@ -9,9 +9,9 @@ Contact Page
 {% block content %}
 <div class="container testowa">
     {% if message_name %}
-    <div class="min-vh-100">
-        <h3> Thanks {{ message_name.title }} for your message!</h3>
-        <a class="mt-4 button-read-me" href="{% url 'index' %}"> Home page </a>
+    <div class="min-vh-100 mail-information" id="contactMailInformation">
+        <h3><span id="mailMessageInformationOne">Thanks</span> {{ message_name.title }} <span id="mailMessageInformationTwo">for your message!</span></h3>
+        <a class="mt-4 button-read-me buttonMessageInformation" href="{% url 'index' %}"> Home page </a>
     </div>
     {% else %}
     <h2 class="mb-5" id="contactHeader">Contact me on :</h2>
