@@ -16,10 +16,10 @@ var language ={
     footerIconsCredentialFrom:"z",
     footerIconsCredential:"Ikony stworzone przez ",
     indexAboutHeader:"Cześć! Jestem Adam!",
-    indexAboutHeader3:"Chce zostać programistą",
+    indexAboutHeader3:"Chcę zostać programistą",
     indexAboutInformation:'Z wykształcenia jestem inżynierem sieci komputerowych, z pasji programistą i '+
                            '„domowym” producentem muzycznym. Uwielbiam pracę zespołową, rozwiązywanie niekonwencjonalnych zadań oraz wyzwań. ' +
-                           'Ambitny i „zawzięty” , zawsze dążący do zrealizowania wyznaczonego celu.',
+                           'Ambitny i „zawzięty”, zawsze dążący do zrealizowania wyznaczonego celu.',
     indexAboutButton:"Czytaj więcej",
     indexSkillsHeader:'Moje umiejętności',
     indexProjectsHeader:'Projekty',

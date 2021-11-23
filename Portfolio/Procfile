@@ -1,1 +1,1 @@
-web:gunicorn Portfolio.wsgi:application --python Portfolio --log-file - --log-level debug --preload --workers 1
+web: gunicorn Portfolio.wsgi:application --python Portfolio --log-file - --log-level debug --preload --workers 1
