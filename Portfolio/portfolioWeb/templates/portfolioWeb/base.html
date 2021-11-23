@@ -5,18 +5,18 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
           integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="{% static 'portfolioWeb/css/portfolioWeb.css' %}" rel="stylesheet">
-
     <title>
         {% block title %}
         {% endblock %}
     </title>
-
+    <link rel="shortcut icon" type="image/png" href="{% static 'portfolioWeb/favicon/favicon.png' %}">
 </head>
 <body>
 
@@ -78,10 +78,10 @@
         <div class="footer-test">
             <h5 id="footerContactHeader">Contact Me on : </h5>
             <ul class="d-flex justify-content-center">
-                <li><a href="#">LinkedIn - <i class="fab fa-linkedin"></i></a></li>
-                <li><a href="#">Github - <i class="fab fa-github"></i></a></li>
-                <li><a href="#">Email - <i class="fas fa-envelope"></i></a></li>
-                <li><a href="#"><span id="footerContactPhone">Phone</span> - <i class="fas fa-phone"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/adam-b%C5%82a%C5%BCy%C5%84ski-230552b8/">LinkedIn - <i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/adam19-pl">Github - <i class="fab fa-github"></i></a></li>
+                <li><a href="mailto:blazynski.adam@gmail.com">Email - <i class="fas fa-envelope"></i></a></li>
+                <li><a href="tel:794-366-422"><span id="footerContactPhone">Phone</span> - <i class="fas fa-phone"></i></a></li>
             </ul>
         </div>
         <div class="footer-test pb-4"><span id="footerIconsCredential">Icons made by</span> <a href="https://www.freepik.com" title="Freepik">Freepik</a> <span id="footerIconsCredentialFrom2">from</span>

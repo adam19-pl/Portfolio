@@ -12,6 +12,13 @@
         width: 400px;
         height: 400px;
 
+        img
+        {
+        border-bottom-left-radius: 45%;
+        border-bottom-right-radius: 45%;
+        padding: 0 0 1rem 0;
+        }
+
         span{
             position: absolute;
             top: 0;

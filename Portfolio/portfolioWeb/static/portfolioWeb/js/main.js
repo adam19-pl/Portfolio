@@ -16,7 +16,7 @@ var language ={
     footerIconsCredentialFrom:"z",
     footerIconsCredential:"Ikony stworzone przez ",
     indexAboutHeader:"Cześć! Jestem Adam!",
-    indexAboutHeader3:"Chce zostać web developerem",
+    indexAboutHeader3:"Chce zostać programistą",
     indexAboutInformation:'Z wykształcenia jestem inżynierem sieci komputerowych, z pasji programistą i '+
                            '„domowym” producentem muzycznym. Uwielbiam pracę zespołową, rozwiązywanie niekonwencjonalnych zadań oraz wyzwań. ' +
                            'Ambitny i „zawzięty” , zawsze dążący do zrealizowania wyznaczonego celu.',
@@ -28,7 +28,7 @@ var language ={
     indexProjectDrinkAppDescription:'Stwórz konto lub zaloguj się i dodaj przepisy drinków.',
     indexProjectsButton:'Więcej Informacji',
     indexContactHeader:'Skontaktuj się ze mną',
-    indexChanceSectionHeader:'Dajcie mi szanse i skontaktujcię się ze mną.',
+    indexChanceSectionHeader:'Skontaktujcię się ze mną',
     indexChanceSectionParagraph:'Pokażę Wam, że było warto!',
     id_message:'Wiadomość',
     id_name: "Twoje imię",
@@ -80,6 +80,9 @@ var language ={
     projectTwoDescription:'Moja wizytówka. Do stworzenia tego projektu użyłem: Python, Django, SASS, HTML, JS, Bootstrap i '+
     'wdrożyłem go za pomocą platformy Heroku,',
     projectThreeDescription :'Chcesz przewidzieć wynik meczu? Wypróbuj tą aplikację. Do jej stworzenia użyłem : Python, Django, SASS, HTML, Bootstrap, JS, ParticlesJS, ChartJS, api-football i wdrożyłem na Heroku.',
+    projectFourDescription: 'Prosta aplikacja e-commerce. Do stworzenia projektu uzyłem: Python, Django, CSS, HTML, Bootstrap',
+    projectFiveDescription: 'Poisson App w terminalu ( bez front-endu). To stworzenia tego projektu użyłem: Python',
+    projectSixDescription: 'Prosta strona intenretowa. Do jej stworzenia użyłęm : HTML, CSS/SASS, JS.',
     }
 }
 
@@ -186,6 +189,9 @@ if (localStorage.Language) {
      projectOneDescription.textContent = language.pl.projectOneDescription;
      projectTwoDescription.textContent = language.pl.projectTwoDescription;
      projectThreeDescription.textContent = language.pl.projectThreeDescription;
+     projectFourDescription.textContent = language.pl.projectFourDescription;
+     projectFiveDescription.textContent = language.pl.projectFiveDescription;
+     projectSixDescription.textContent = language.pl.projectSixDescription;
     }
    }
 }

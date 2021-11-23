@@ -9,9 +9,23 @@
     .contact-socials{
         div{
         width: 30%;
+        a
+        {
+        display: inline-block;
+        padding: 1rem;
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+        border: 1px solid transparent;
+        &:hover{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+        }
             img{
             width: 60px;
             }
+        }
+
     }
     @media only screen and (max-width: 580px) {
         flex-direction:column;
